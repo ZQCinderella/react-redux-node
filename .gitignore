@@ -1,0 +1,11 @@
+.idea
+node_modules
+dist
+dll
+.nyc_output
+coverage
+npm-debug.log
+package-lock.json
+server/config/index.js
+.DS_Store
+*/.DS_Store
