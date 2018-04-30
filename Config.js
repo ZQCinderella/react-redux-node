@@ -5,8 +5,8 @@ const moduleName = 'optimus';   //项目名称， 如果一个node对接多个�
 
 module.exports = {
   title: '擎天柱',
-  pathInMappingJson: './public/dist',
-  context: `${optimus}`,
+  pathInMappingJson: './public/dist/',
+  context: `${moduleName}`,
   entry: {
     vendor: [
       'react',
@@ -20,7 +20,7 @@ module.exports = {
       'fetch-ie8',
       'antd'
     ],
-    admin: ['client/end_pages/index.js'],
-    client: ['babel-polyfill', './client/front_pages/index.js']
+    admin: ['./client/end_pages/index.js'],
+    client: ['./client/front_pages/index.js']
   }
 }

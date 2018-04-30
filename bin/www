@@ -3,8 +3,6 @@ const config = require('../server/config');
 const app = require('../server');
 const debug = require('debug')('myapp:server');
 
-console.log('wwww');
-
 //创建http服务器
 const server = http.createServer(app);
 

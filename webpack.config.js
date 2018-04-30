@@ -3,8 +3,7 @@
  */
 const path = require('path');
 let currentWebpackConfigFile = './webpack.prod.js';
-
-if (process.env.NODE_ENV === 'undefined') {
+if (process.env.NODE_ENV === undefined) {
   console.log('NODE_ENV is undefind! use default [development].');
   process.env.NODE_ENV = 'development';
 }

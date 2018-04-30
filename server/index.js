@@ -6,7 +6,8 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 
-const isDev = process.env.NODE_DEV === 'development';
+const isDev = process.env.NODE_ENV === 'development';
+console.log(process.env.NODE_ENV);
 console.log(`process.env.NODE_ENV is ${process.env.NODE_ENV}`);
 
 const app = express();

@@ -8,10 +8,11 @@
   "author": "fet",
   "license": "MIT",
   "scripts": {
-    "dll": "cross-env NODE_ENV=development webpac --progress --colors --config webpack.dll.js && cross-env NODE_ENV=production webpack --progress --colors --config webpack.dll.js",
-    "generate-env": "node setup.js",
-    "prebuild": "cross-env NODE_ENV=production npm install --only=prod && npm run generate-env",
-    "build": "webpack -p --colors --config webpack.prod.js",
+    "clean": "rimraf ./public/dist",
+    "dll": "cross-env NODE_ENV=development webpack --progress --colors --config webpack.dll.js && cross-env NODE_ENV=production webpack --progress --colors --config webpack.dll.js",
+    "generate-env": "node ./setup.js",
+    "prebuild": "npm install --only=prod && npm run clean",
+    "build": "cross-env NODE_ENV=production webpack -p --colors --config webpack.config.js && cross-env NODE_ENV=production npm run generate-env",
     "postbuild": "sh build.sh",
     "prestart": "cross-env NODE_ENV=development npm run generate-env",
     "start": "nodemon ./bin/www"
@@ -37,6 +38,7 @@
     "body-parser": "^1.17.2",
     "busboy": "^0.2.14",
     "classnames": "^2.2.5",
+    "clean-webpack-plugin": "^0.1.19",
     "compression": "^1.6.2",
     "connect-busboy": "0.0.2",
     "connect-mongo": "1.1.0",

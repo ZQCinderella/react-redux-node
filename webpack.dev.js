@@ -3,9 +3,13 @@
  */
 const webpack = require('webpack');
 const fs = require('fs');
+const path = require('path');
+const ManifestPlugin = require('webpack-manifest-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 const publicPath = path.join(__dirname, 'public'); 
 
 module.exports = (config) => {
+  //delete config.entry.vendor;
   return {
     entry: config.entry,
     output: {
@@ -14,16 +18,42 @@ module.exports = (config) => {
       sourceMapFilename: './map/[file].map',
       chunkFilename: '[name].[hash].js',
     },
+    devtool: 'eval-source-map',
+    resolve: {
+      //自动扩展文件后缀名
+      extensions: ['.js', '.less', '.png', '.jpg', '.gif'],
+      //模块别名定义，方便直接引用别名
+      // alias: {
+      //   'react-router-redux': path.resolve(nodeModules, 'react-router-redux-fixed/lib/index.js'),
+      // },
+      // 参与编译的文件
+      modules: [
+        'client',
+        'node_modules',
+      ],
+    },
     plugins: [
       new webpack.HotModuleReplacementPlugin(),
       new webpack.NoEmitOnErrorsPlugin(),
+      new CleanWebpackPlugin(['public/dist']),
       new webpack.LoaderOptionsPlugin({
         debug: true,
         options: {
           eslint: {
             emitError: true,
-            configFile: './eslintrc.js'
+            configFile: '.eslintrc.js'
           }
+        }
+      }),
+      new webpack.DllReferencePlugin({
+        context: __dirname,
+        manifest: require('./public/dll/vendor-manifest.json'),
+      }),
+      new ManifestPlugin({
+        fileName: 'mapping.json',
+        publicPath: config.pathInMappingJson,
+        seed: {
+          title: config.title
         }
       })
     ],
@@ -32,7 +62,7 @@ module.exports = (config) => {
         {
           enforce: 'pre',
           test: /\.js$/,
-          exclude: 'node_modules',
+          exclude: '/node_modules/',
           use: 'eslint-loader'
         },
         {
@@ -69,7 +99,7 @@ module.exports = (config) => {
             }
           }, {
             loader: 'postcss-loader',
-            option: {
+            options:{
               sourceMap: true
             }
           }, {

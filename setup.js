@@ -21,7 +21,6 @@ const targetConfigPath = path.join(__dirname, 'server/config/index.js');
 
 //根据configPath生成 server/config/index.js
 if (fs.existsSync(targetConfigPath)) {
-  fs.unlinkSync(targetConfigPath);  
+  fs.unlinkSync(targetConfigPath);
 }
-
 fs.createReadStream(sourceConfigPath).pipe(fs.createWriteStream(targetConfigPath));
