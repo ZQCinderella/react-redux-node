@@ -4,13 +4,12 @@
 const express = require('express');
 const router = express.Router();
 
-router.get('/api/user', (req, res, next) => {
-  console.log('reqqq');
+router.get('/', (req, res, next) => {
   res.json({
     name: 'fet',
     age: 10
   });
-  next();
+  //next();
 });
 module.exports = router;
 

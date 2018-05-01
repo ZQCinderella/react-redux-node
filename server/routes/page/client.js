@@ -5,21 +5,38 @@
 //前端页面路由
 const express = require('express');
 const router = express.Router();
-const getJS = (key) => {
+const mapAsset = require('../../middleware/extractMapping');
+const getJS = key => {
   const buildScript = src => `<script src=${src}></script>`;
-  const script = `${buildScript('/public/dll/vendor.dll.js')}${buildScript(`/public/dist/${key}.bundle.js`)}`;
+  let script = '';
+  if (global.staticAssetsMapping[`${key}.js`]) {
+    if (process.env.NODE_ENV === 'development') {
+      script = `${buildScript('/public/dll/vendor.dll.js')}${buildScript(global.staticAssetsMapping[`${key}.js`])}`;
+    } else {
+      script = `${buildScript(global.staticAssetsMapping['vendor.js'])}${buildCSS(global.staticAssetsMapping[`${key}.js`])}`;
+    }
+  }
   return script;
 }
+const getCSS = key => {
+  const buildCSS = href => `<link rel="stylesheet" href="${href}">`;
+  if (global.staticAssetsMapping[`${key}.css`]) {
+    return `${buildCSS(global.staticAssetsMapping[`${key}.css`])}`;
+  }
+  return '';
+}
 router.get('*', (req, res, next) => {
+  //mapAsset('client.js');
   const data = {
     name: 'sheng.yu',
     age: '20',
     gender: 'male',
   }
-  const sc = getJS('client');
+  const key = 'client';
   res.render('client', {
     data: JSON.stringify(data),
-    scripts: getJS('client'),
+    scripts: getJS(key),
+    links: getCSS(key)
   });
 })
 

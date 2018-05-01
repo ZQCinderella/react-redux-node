@@ -5,7 +5,7 @@ const moduleName = 'optimus';   //项目名称， 如果一个node对接多个�
 
 module.exports = {
   title: '擎天柱',
-  pathInMappingJson: './public/dist/',
+  pathInMappingJson: '/public/dist/',
   context: `${moduleName}`,
   entry: {
     vendor: [

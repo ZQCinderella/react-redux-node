@@ -3,11 +3,12 @@
  */
 const path = require('path');
 const fs = require('fs');
+const extractMapping = require('./middleware/extractMapping');
 
 const isDev = process.env.NODE_ENV === 'development';
-if (!isDev) {
-  global.fileMapping = require('../public/dist/mapping.json');
-}
+//此时mapping.json可能还没有生成
+//global.fileMapping = require('../public/dist/mapping.json');
+
 
 /**
  * 监听api路由 (以文件夹目录为api的地址)
@@ -36,8 +37,8 @@ const addApiRoute = (app) => {
         const _router = require(`./${_url}`);
         // 现在 _url是 routes/api/xxx， 通常前端访问不需要携带api，所以统一去掉api
         const replacedUrl = _url.replace(/\/routes/, '');
-        console.log(replacedUrl);
-        app.use(_url, _router);
+        console.log(replacedUrl, `.${_url}`);
+        app.use(replacedUrl, _router);
         //_router(app);
       }
     })
@@ -51,5 +52,5 @@ const client = require('./routes/page/client.js');
 module.exports = app => {
   addApiRoute(app);
   app.use('/admin', admin);  //后台路由
-  app.use('/', client);   //前台路由
+  app.use('/', extractMapping, client);   //前台路由
 }

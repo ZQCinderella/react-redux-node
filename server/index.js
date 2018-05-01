@@ -33,14 +33,19 @@ if (isDev) {
   //webpack-dev-middleware is a wrapper that will emit files processed by webpack to a server
   const webpackDevMiddleware = require('webpack-dev-middleware')
   const webpackHotMiddleware = require('webpack-hot-middleware')
-  // app.use(webpackHotMiddleware(compiler, {
-  //   log: false,
-  //   path: '/__webpack_hmr',
-  //   heartbeat: 2000
-  // }))
+  app.use(webpackHotMiddleware(compiler, {
+    log: false,
+    path: '/__webpack_hmr',
+    heartbeat: 2000
+  }))
   app.use(webpackDevMiddleware(compiler, {
     publicPath: webpackConfig.output.publicPath,
-    serverSideRender: true
+    serverSideRender: true,
+    cache: true, //开启缓存，增量编译
+    stats: {
+      // colors: true, //打印日志显示颜色
+      reasons: true //打印相关被引入的模块
+    },
   }))
 }
 

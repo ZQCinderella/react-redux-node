@@ -9,7 +9,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const publicPath = path.join(__dirname, 'public');
 
 const extractCss = new ExtractTextPlugin({
-  filename: 'css/style.[name].[hash].css',
+  filename: 'css/[name].[hash].css',
   allChunks: true
 });
 module.exports = (config) => {
@@ -111,10 +111,9 @@ module.exports = (config) => {
         },
         {
           test: /\.scss$/,
-          use: [
-            {
-              loader: 'style-loader'
-            }, {
+          use: ExtractCSS.extract({
+            fallback: 'style-loader',
+            use: [{
               loader: 'css-loader',
               options: {
                 sourceMap: true
@@ -129,8 +128,8 @@ module.exports = (config) => {
               options: {
                 sourceMap: true
               }
-            }
-          ]
+            }]
+          }),
         },
         {
           test: /\.(png|gif|jpg)$/,

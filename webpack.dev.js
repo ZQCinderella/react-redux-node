@@ -5,9 +5,14 @@ const webpack = require('webpack');
 const fs = require('fs');
 const path = require('path');
 const ManifestPlugin = require('webpack-manifest-plugin');
+const ExtractTextPlugin = require( 'extract-text-webpack-plugin' );
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const publicPath = path.join(__dirname, 'public'); 
 
+const ExtractCSS = new ExtractTextPlugin({
+  filename: 'css/[name].bundle.css',
+  allChunks: true
+});
 module.exports = (config) => {
   //delete config.entry.vendor;
   return {
@@ -21,7 +26,7 @@ module.exports = (config) => {
     devtool: 'eval-source-map',
     resolve: {
       //自动扩展文件后缀名
-      extensions: ['.js', '.less', '.png', '.jpg', '.gif'],
+      extensions: ['.js', '.less', 'css', '.png', '.jpg', '.gif'],
       //模块别名定义，方便直接引用别名
       // alias: {
       //   'react-router-redux': path.resolve(nodeModules, 'react-router-redux-fixed/lib/index.js'),
@@ -33,7 +38,7 @@ module.exports = (config) => {
       ],
     },
     plugins: [
-      //new webpack.HotModuleReplacementPlugin(), // 热部署替换模块      
+      new webpack.HotModuleReplacementPlugin(), // 热部署替换模块      
       new webpack.NoEmitOnErrorsPlugin(),
       //new CleanWebpackPlugin(['public/dist']),
       new webpack.LoaderOptionsPlugin({
@@ -55,7 +60,8 @@ module.exports = (config) => {
         seed: {
           title: config.title
         }
-      })
+      }),
+      ExtractCSS      
     ],
     module: {
       rules: [
@@ -77,25 +83,26 @@ module.exports = (config) => {
         },
         {
           test: /\.css$/,
-          use: ['style-loader', {
-            loader: 'css-loader',
-            options: {
-              sourceMap: true,
-              localIdentName: '[name]__[local]__[hash:base64:5]'
-            }
-          },{
-            loader: 'postcss-loader',
-            options: {
-              sourceMap: true
-            }
-          }]
+          use: ExtractCSS.extract({
+            fallback: 'style-loader',
+            use: [{
+              loader: 'css-loader',
+              options: {
+                sourceMap: true,
+              }
+            }, {
+              loader: 'postcss-loader',
+              options: {
+                sourceMap: true,
+              }
+            }]
+          })
         },
         {
           test: /\.scss$/,
-          use: [
-            {
-              loader: 'style-loader'
-            }, {
+          use: ExtractCSS.extract({
+            fallback: 'style-loader',
+            use: [{
               loader: 'css-loader',
               options: {
                 sourceMap: true
@@ -110,8 +117,8 @@ module.exports = (config) => {
               options: {
                 sourceMap: true
               }
-            }
-          ]
+            }]
+          }),
         },
         {
           test: /\.(png|gif|jpg)$/,
