@@ -12,7 +12,7 @@ router.get('*', (req, res, next) => {
     age: '20',
     gender: 'male'
   }
-  res.render('admin', { data });
+  res.render('admin', { data: JSON.stringify(data) });
 })
 
 module.exports = router;

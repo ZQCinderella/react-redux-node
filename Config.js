@@ -21,6 +21,6 @@ module.exports = {
       'antd'
     ],
     admin: ['./client/end_pages/index.js'],
-    client: ['./client/front_pages/index.js']
+    client: ['babel-polyfill', './client/front_pages/index.js']
   }
 }

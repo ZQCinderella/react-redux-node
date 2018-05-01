@@ -1,0 +1,15 @@
+@charset "utf-8";
+
+$main-color: #59A3FF;
+$white-color: #fff;
+
+$font-size-14: 14px;
+$font-size-16: 16px;
+
+.main-div{
+  width: 200px;
+  height: 200px;
+  font-size: 50px;
+  color: $white-color;
+  background: $main-color; 
+}

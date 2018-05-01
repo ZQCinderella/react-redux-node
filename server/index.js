@@ -31,21 +31,17 @@ if (isDev) {
   const webpack = require('webpack');
   const compiler = webpack(webpackConfig);
   //webpack-dev-middleware is a wrapper that will emit files processed by webpack to a server
-  const devMiddleWare = require('webpack-dev-middleware');
-  const hot = require('webpack-hot-middleware');
-  app.use(devMiddleWare(compiler, {
-    noInfo: true,  //不打印输出
-    cache: true,
-    stats: {
-      colors: true,    // 输出带颜色日志
-      reasons: true,   //打印引用的相关模块
-    },
-    publicPath: webpackConfig.output.publicPath
-  }));
-  app.use(hot(compiler, {
-    path: '/__webpack_hmr',
-    heartbeat: 10 * 1000
-  }));
+  const webpackDevMiddleware = require('webpack-dev-middleware')
+  const webpackHotMiddleware = require('webpack-hot-middleware')
+  // app.use(webpackHotMiddleware(compiler, {
+  //   log: false,
+  //   path: '/__webpack_hmr',
+  //   heartbeat: 2000
+  // }))
+  app.use(webpackDevMiddleware(compiler, {
+    publicPath: webpackConfig.output.publicPath,
+    serverSideRender: true
+  }))
 }
 
 require('./boot.js')(app);   //可以做一些用户登录状态的校验
@@ -60,7 +56,7 @@ app.use((req, res, next) => {
   next(err);
 });
 
-app.use((err, req, res, next) => {
+/*app.use((err, req, res, next) => {
   if (!req.url.startsWith('/query')) {
     return res.status(200).json({
       code: err.code || 'E-50x',
@@ -73,6 +69,6 @@ app.use((err, req, res, next) => {
     message: err.message || 'error',
     error: err
   });
-});
+});*/
 
 module.exports = app;

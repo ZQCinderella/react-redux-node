@@ -13,10 +13,10 @@ module.exports = (config) => {
   return {
     entry: config.entry,
     output: {
-      filename: '[name].[hash].js',
-      path: path.resolve(publicPath, '/dist'),
+      filename: '[name].bundle.js',
+      path: path.resolve(publicPath, 'dist/'),
       sourceMapFilename: './map/[file].map',
-      chunkFilename: '[name].[hash].js',
+      publicPath: '/public/dist/'
     },
     devtool: 'eval-source-map',
     resolve: {
@@ -33,9 +33,9 @@ module.exports = (config) => {
       ],
     },
     plugins: [
-      new webpack.HotModuleReplacementPlugin(),
+      //new webpack.HotModuleReplacementPlugin(), // 热部署替换模块      
       new webpack.NoEmitOnErrorsPlugin(),
-      new CleanWebpackPlugin(['public/dist']),
+      //new CleanWebpackPlugin(['public/dist']),
       new webpack.LoaderOptionsPlugin({
         debug: true,
         options: {
@@ -91,23 +91,27 @@ module.exports = (config) => {
           }]
         },
         {
-          test: /\.sass$/,
-          use: ['style-loader', {
-            loader: 'css-loader',
-            options: {
-              sourceMap: true
+          test: /\.scss$/,
+          use: [
+            {
+              loader: 'style-loader'
+            }, {
+              loader: 'css-loader',
+              options: {
+                sourceMap: true
+              }
+            }, {
+              loader: 'postcss-loader',
+              options: {
+                sourceMap: true
+              }
+            }, {
+              loader: 'sass-loader',
+              options: {
+                sourceMap: true
+              }
             }
-          }, {
-            loader: 'postcss-loader',
-            options:{
-              sourceMap: true
-            }
-          }, {
-            loader: 'sass-loader',
-            options: {
-              sourceMap: true
-            }
-          }]
+          ]
         },
         {
           test: /\.(png|gif|jpg)$/,
