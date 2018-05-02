@@ -9,19 +9,12 @@ import './sass/index.scss';
 class Hello extends Component {
   constructor(props) {
     super(props);
-    // const xhr = new XMLHttpRequest();
-    // xhr.open('GET', '/api/user', true);
-    // xhr.onreadystatechange = () => {
-    //   if (xhr.status === 200 && xhr.readyState === 4) {
-    //     console.log(xhr.responseText);
-    //   }
-    // }
-    // xhr.send(null);
     fetch('/api/user').then( response => {
       return response.json();
     }).then( json => {
       console.log(json);
     });
+    console.log('constructor');
   }
   render() {
     console.log('father');

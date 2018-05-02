@@ -1,0 +1,963 @@
+NODE_ENV is development
+use webpack config file is ./webpack.dev.js
+{
+  "errors": [],
+  "warnings": [],
+  "version": "2.7.0",
+  "hash": "0114dc69fbf3ffb57a7b",
+  "time": 1998,
+  "publicPath": "/",
+  "assetsByChunkName": {
+    "client": [
+      "client.bundle.js",
+      "css/client.bundle.css"
+    ],
+    "admin": "admin.bundle.js"
+  },
+  "assets": [
+    {
+      "name": "client.bundle.js",
+      "size": 12248,
+      "chunks": [
+        0
+      ],
+      "chunkNames": [
+        "client"
+      ],
+      "emitted": true
+    },
+    {
+      "name": "admin.bundle.js",
+      "size": 3397,
+      "chunks": [
+        1
+      ],
+      "chunkNames": [
+        "admin"
+      ],
+      "emitted": true
+    },
+    {
+      "name": "css/client.bundle.css",
+      "size": 104,
+      "chunks": [
+        0
+      ],
+      "chunkNames": [
+        "client"
+      ],
+      "emitted": true
+    },
+    {
+      "name": "mapping.json",
+      "size": 168,
+      "chunks": [],
+      "chunkNames": [],
+      "emitted": true
+    }
+  ],
+  "entrypoints": {
+    "admin": {
+      "chunks": [
+        1
+      ],
+      "assets": [
+        "admin.bundle.js"
+      ]
+    },
+    "client": {
+      "chunks": [
+        0
+      ],
+      "assets": [
+        "client.bundle.js",
+        "css/client.bundle.css"
+      ]
+    }
+  },
+  "chunks": [
+    {
+      "id": 0,
+      "rendered": true,
+      "initial": true,
+      "entry": true,
+      "extraAsync": false,
+      "size": 4109,
+      "names": [
+        "client"
+      ],
+      "files": [
+        "client.bundle.js",
+        "css/client.bundle.css"
+      ],
+      "hash": "c53a3fb2f6a6d8769a25",
+      "parents": [],
+      "modules": [
+        {
+          "id": 0,
+          "identifier": "external \"vendorLibrary\"",
+          "name": "external \"vendorLibrary\"",
+          "index": 5,
+          "index2": 2,
+          "size": 42,
+          "cacheable": false,
+          "built": false,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            0
+          ],
+          "assets": [],
+          "issuer": "delegated 0 from dll-reference vendorLibrary",
+          "issuerId": 1,
+          "issuerName": "delegated ./node_modules/react/react.js from dll-reference vendorLibrary",
+          "profile": {
+            "factory": 0,
+            "building": 1
+          },
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "reasons": [
+            {
+              "moduleId": 1,
+              "moduleIdentifier": "delegated 0 from dll-reference vendorLibrary",
+              "module": "delegated ./node_modules/react/react.js from dll-reference vendorLibrary",
+              "moduleName": "delegated ./node_modules/react/react.js from dll-reference vendorLibrary",
+              "type": "delegated source",
+              "userRequest": "dll-reference vendorLibrary"
+            },
+            {
+              "moduleId": 2,
+              "moduleIdentifier": "delegated 12 from dll-reference vendorLibrary",
+              "module": "delegated ./node_modules/react-dom/index.js from dll-reference vendorLibrary",
+              "moduleName": "delegated ./node_modules/react-dom/index.js from dll-reference vendorLibrary",
+              "type": "delegated source",
+              "userRequest": "dll-reference vendorLibrary"
+            }
+          ],
+          "usedExports": false,
+          "providedExports": null,
+          "depth": 3
+        },
+        {
+          "id": 1,
+          "identifier": "delegated 0 from dll-reference vendorLibrary",
+          "name": "delegated ./node_modules/react/react.js from dll-reference vendorLibrary",
+          "index": 4,
+          "index2": 3,
+          "size": 42,
+          "cacheable": false,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            0
+          ],
+          "assets": [],
+          "issuer": "/Users/fengertong/sherry/react-redux-node/node_modules/babel-loader/lib/index.js!/Users/fengertong/sherry/react-redux-node/node_modules/eslint-loader/index.js!/Users/fengertong/sherry/react-redux-node/client/front_pages/index.js",
+          "issuerId": "./client/front_pages/index.js",
+          "issuerName": "./client/front_pages/index.js",
+          "profile": {
+            "factory": 286,
+            "building": 0
+          },
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "reasons": [
+            {
+              "moduleId": "./client/front_pages/index.js",
+              "moduleIdentifier": "/Users/fengertong/sherry/react-redux-node/node_modules/babel-loader/lib/index.js!/Users/fengertong/sherry/react-redux-node/node_modules/eslint-loader/index.js!/Users/fengertong/sherry/react-redux-node/client/front_pages/index.js",
+              "module": "./client/front_pages/index.js",
+              "moduleName": "./client/front_pages/index.js",
+              "type": "cjs require",
+              "userRequest": "react",
+              "loc": "5:13-29"
+            }
+          ],
+          "usedExports": true,
+          "providedExports": null,
+          "depth": 2
+        },
+        {
+          "id": 2,
+          "identifier": "delegated 12 from dll-reference vendorLibrary",
+          "name": "delegated ./node_modules/react-dom/index.js from dll-reference vendorLibrary",
+          "index": 6,
+          "index2": 4,
+          "size": 42,
+          "cacheable": false,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            0
+          ],
+          "assets": [],
+          "issuer": "/Users/fengertong/sherry/react-redux-node/node_modules/babel-loader/lib/index.js!/Users/fengertong/sherry/react-redux-node/node_modules/eslint-loader/index.js!/Users/fengertong/sherry/react-redux-node/client/front_pages/index.js",
+          "issuerId": "./client/front_pages/index.js",
+          "issuerName": "./client/front_pages/index.js",
+          "profile": {
+            "factory": 287,
+            "building": 0,
+            "dependencies": 0
+          },
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "reasons": [
+            {
+              "moduleId": "./client/front_pages/index.js",
+              "moduleIdentifier": "/Users/fengertong/sherry/react-redux-node/node_modules/babel-loader/lib/index.js!/Users/fengertong/sherry/react-redux-node/node_modules/eslint-loader/index.js!/Users/fengertong/sherry/react-redux-node/client/front_pages/index.js",
+              "module": "./client/front_pages/index.js",
+              "moduleName": "./client/front_pages/index.js",
+              "type": "cjs require",
+              "userRequest": "react-dom",
+              "loc": "9:16-36"
+            }
+          ],
+          "usedExports": true,
+          "providedExports": null,
+          "depth": 2
+        },
+        {
+          "id": "./client/front_pages/index.js",
+          "identifier": "/Users/fengertong/sherry/react-redux-node/node_modules/babel-loader/lib/index.js!/Users/fengertong/sherry/react-redux-node/node_modules/eslint-loader/index.js!/Users/fengertong/sherry/react-redux-node/client/front_pages/index.js",
+          "name": "./client/front_pages/index.js",
+          "index": 3,
+          "index2": 6,
+          "size": 3914,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            0
+          ],
+          "assets": [],
+          "issuer": "multi ./client/front_pages/index.js",
+          "issuerId": 4,
+          "issuerName": "multi ./client/front_pages/index.js",
+          "profile": {
+            "factory": 245,
+            "building": 892
+          },
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "reasons": [
+            {
+              "moduleId": 4,
+              "moduleIdentifier": "multi ./client/front_pages/index.js",
+              "module": "multi ./client/front_pages/index.js",
+              "moduleName": "multi ./client/front_pages/index.js",
+              "type": "single entry",
+              "userRequest": "./client/front_pages/index.js",
+              "loc": "client:100000"
+            }
+          ],
+          "usedExports": true,
+          "providedExports": null,
+          "depth": 1,
+          "source": "'use strict';\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nvar _react = require('react');\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _reactDom = require('react-dom');\n\nvar _reactDom2 = _interopRequireDefault(_reactDom);\n\nrequire('./sass/index.scss');\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return call && (typeof call === \"object\" || typeof call === \"function\") ? call : self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function, not \" + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /*\n                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Created by sheng.yu on 2018-05-01 01:43:37. \n                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */\n\nvar Hello = function (_Component) {\n  _inherits(Hello, _Component);\n\n  function Hello(props) {\n    _classCallCheck(this, Hello);\n\n    // const xhr = new XMLHttpRequest();\n    // xhr.open('GET', '/api/user', true);\n    // xhr.onreadystatechange = () => {\n    //   if (xhr.status === 200 && xhr.readyState === 4) {\n    //     console.log(xhr.responseText);\n    //   }\n    // }\n    // xhr.send(null);\n    // fetch('/api/user').then( response => {\n    //   return response.json();\n    // }).then( json => {\n    //   console.log(json);\n    // });\n    var _this = _possibleConstructorReturn(this, (Hello.__proto__ || Object.getPrototypeOf(Hello)).call(this, props));\n\n    console.log('constructor');\n    return _this;\n  }\n\n  _createClass(Hello, [{\n    key: 'render',\n    value: function render() {\n      console.log('father');\n      return _react2.default.createElement(\n        'div',\n        { className: 'main-div' },\n        '\\u54C8'\n      );\n    }\n  }]);\n\n  return Hello;\n}(_react.Component);\n\n_reactDom2.default.render(_react2.default.createElement(Hello, null), document.getElementById('main'));"
+        },
+        {
+          "id": "./client/front_pages/sass/index.scss",
+          "identifier": "/Users/fengertong/sherry/react-redux-node/node_modules/extract-text-webpack-plugin/loader.js??ref--3-0!/Users/fengertong/sherry/react-redux-node/node_modules/style-loader/index.js!/Users/fengertong/sherry/react-redux-node/node_modules/css-loader/index.js??ref--3-2!/Users/fengertong/sherry/react-redux-node/node_modules/postcss-loader/lib/index.js??ref--3-3!/Users/fengertong/sherry/react-redux-node/node_modules/sass-loader/lib/loader.js??ref--3-4!/Users/fengertong/sherry/react-redux-node/client/front_pages/sass/index.scss",
+          "name": "./client/front_pages/sass/index.scss",
+          "index": 7,
+          "index2": 5,
+          "size": 41,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            0
+          ],
+          "assets": [],
+          "issuer": "/Users/fengertong/sherry/react-redux-node/node_modules/babel-loader/lib/index.js!/Users/fengertong/sherry/react-redux-node/node_modules/eslint-loader/index.js!/Users/fengertong/sherry/react-redux-node/client/front_pages/index.js",
+          "issuerId": "./client/front_pages/index.js",
+          "issuerName": "./client/front_pages/index.js",
+          "profile": {
+            "factory": 11,
+            "building": 812
+          },
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "reasons": [
+            {
+              "moduleId": "./client/front_pages/index.js",
+              "moduleIdentifier": "/Users/fengertong/sherry/react-redux-node/node_modules/babel-loader/lib/index.js!/Users/fengertong/sherry/react-redux-node/node_modules/eslint-loader/index.js!/Users/fengertong/sherry/react-redux-node/client/front_pages/index.js",
+              "module": "./client/front_pages/index.js",
+              "moduleName": "./client/front_pages/index.js",
+              "type": "cjs require",
+              "userRequest": "./sass/index.scss",
+              "loc": "13:0-28"
+            }
+          ],
+          "usedExports": true,
+          "providedExports": null,
+          "depth": 2,
+          "source": "// removed by extract-text-webpack-plugin"
+        },
+        {
+          "id": 4,
+          "identifier": "multi ./client/front_pages/index.js",
+          "name": "multi ./client/front_pages/index.js",
+          "index": 2,
+          "index2": 7,
+          "size": 28,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            0
+          ],
+          "assets": [],
+          "issuer": null,
+          "issuerId": null,
+          "issuerName": null,
+          "profile": {
+            "factory": 0,
+            "building": 0
+          },
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "reasons": [],
+          "usedExports": true,
+          "providedExports": null,
+          "depth": 0
+        }
+      ],
+      "filteredModules": 0,
+      "origins": [
+        {
+          "moduleId": 4,
+          "module": "multi ./client/front_pages/index.js",
+          "moduleIdentifier": "multi ./client/front_pages/index.js",
+          "moduleName": "multi ./client/front_pages/index.js",
+          "loc": "",
+          "name": "client",
+          "reasons": []
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "rendered": true,
+      "initial": true,
+      "entry": true,
+      "extraAsync": false,
+      "size": 56,
+      "names": [
+        "admin"
+      ],
+      "files": [
+        "admin.bundle.js"
+      ],
+      "hash": "154cc03578ebb89b9dae",
+      "parents": [],
+      "modules": [
+        {
+          "id": "./client/end_pages/index.js",
+          "identifier": "/Users/fengertong/sherry/react-redux-node/node_modules/babel-loader/lib/index.js!/Users/fengertong/sherry/react-redux-node/node_modules/eslint-loader/index.js!/Users/fengertong/sherry/react-redux-node/client/end_pages/index.js",
+          "name": "./client/end_pages/index.js",
+          "index": 1,
+          "index2": 0,
+          "size": 28,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            1
+          ],
+          "assets": [],
+          "issuer": "multi ./client/end_pages/index.js",
+          "issuerId": 3,
+          "issuerName": "multi ./client/end_pages/index.js",
+          "profile": {
+            "factory": 34,
+            "building": 950
+          },
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "reasons": [
+            {
+              "moduleId": 3,
+              "moduleIdentifier": "multi ./client/end_pages/index.js",
+              "module": "multi ./client/end_pages/index.js",
+              "moduleName": "multi ./client/end_pages/index.js",
+              "type": "single entry",
+              "userRequest": "./client/end_pages/index.js",
+              "loc": "admin:100000"
+            }
+          ],
+          "usedExports": true,
+          "providedExports": null,
+          "depth": 1,
+          "source": "'use strict';\n\nvar a = '20';"
+        },
+        {
+          "id": 3,
+          "identifier": "multi ./client/end_pages/index.js",
+          "name": "multi ./client/end_pages/index.js",
+          "index": 0,
+          "index2": 1,
+          "size": 28,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            1
+          ],
+          "assets": [],
+          "issuer": null,
+          "issuerId": null,
+          "issuerName": null,
+          "profile": {
+            "factory": 1,
+            "building": 0
+          },
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "reasons": [],
+          "usedExports": true,
+          "providedExports": null,
+          "depth": 0
+        }
+      ],
+      "filteredModules": 0,
+      "origins": [
+        {
+          "moduleId": 3,
+          "module": "multi ./client/end_pages/index.js",
+          "moduleIdentifier": "multi ./client/end_pages/index.js",
+          "moduleName": "multi ./client/end_pages/index.js",
+          "loc": "",
+          "name": "admin",
+          "reasons": []
+        }
+      ]
+    }
+  ],
+  "modules": [
+    {
+      "id": 0,
+      "identifier": "external \"vendorLibrary\"",
+      "name": "external \"vendorLibrary\"",
+      "index": 5,
+      "index2": 2,
+      "size": 42,
+      "cacheable": false,
+      "built": false,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        0
+      ],
+      "assets": [],
+      "issuer": "delegated 0 from dll-reference vendorLibrary",
+      "issuerId": 1,
+      "issuerName": "delegated ./node_modules/react/react.js from dll-reference vendorLibrary",
+      "profile": {
+        "factory": 0,
+        "building": 1
+      },
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "reasons": [
+        {
+          "moduleId": 1,
+          "moduleIdentifier": "delegated 0 from dll-reference vendorLibrary",
+          "module": "delegated ./node_modules/react/react.js from dll-reference vendorLibrary",
+          "moduleName": "delegated ./node_modules/react/react.js from dll-reference vendorLibrary",
+          "type": "delegated source",
+          "userRequest": "dll-reference vendorLibrary"
+        },
+        {
+          "moduleId": 2,
+          "moduleIdentifier": "delegated 12 from dll-reference vendorLibrary",
+          "module": "delegated ./node_modules/react-dom/index.js from dll-reference vendorLibrary",
+          "moduleName": "delegated ./node_modules/react-dom/index.js from dll-reference vendorLibrary",
+          "type": "delegated source",
+          "userRequest": "dll-reference vendorLibrary"
+        }
+      ],
+      "usedExports": false,
+      "providedExports": null,
+      "depth": 3
+    },
+    {
+      "id": 1,
+      "identifier": "delegated 0 from dll-reference vendorLibrary",
+      "name": "delegated ./node_modules/react/react.js from dll-reference vendorLibrary",
+      "index": 4,
+      "index2": 3,
+      "size": 42,
+      "cacheable": false,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        0
+      ],
+      "assets": [],
+      "issuer": "/Users/fengertong/sherry/react-redux-node/node_modules/babel-loader/lib/index.js!/Users/fengertong/sherry/react-redux-node/node_modules/eslint-loader/index.js!/Users/fengertong/sherry/react-redux-node/client/front_pages/index.js",
+      "issuerId": "./client/front_pages/index.js",
+      "issuerName": "./client/front_pages/index.js",
+      "profile": {
+        "factory": 286,
+        "building": 0
+      },
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "reasons": [
+        {
+          "moduleId": "./client/front_pages/index.js",
+          "moduleIdentifier": "/Users/fengertong/sherry/react-redux-node/node_modules/babel-loader/lib/index.js!/Users/fengertong/sherry/react-redux-node/node_modules/eslint-loader/index.js!/Users/fengertong/sherry/react-redux-node/client/front_pages/index.js",
+          "module": "./client/front_pages/index.js",
+          "moduleName": "./client/front_pages/index.js",
+          "type": "cjs require",
+          "userRequest": "react",
+          "loc": "5:13-29"
+        }
+      ],
+      "usedExports": true,
+      "providedExports": null,
+      "depth": 2
+    },
+    {
+      "id": 2,
+      "identifier": "delegated 12 from dll-reference vendorLibrary",
+      "name": "delegated ./node_modules/react-dom/index.js from dll-reference vendorLibrary",
+      "index": 6,
+      "index2": 4,
+      "size": 42,
+      "cacheable": false,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        0
+      ],
+      "assets": [],
+      "issuer": "/Users/fengertong/sherry/react-redux-node/node_modules/babel-loader/lib/index.js!/Users/fengertong/sherry/react-redux-node/node_modules/eslint-loader/index.js!/Users/fengertong/sherry/react-redux-node/client/front_pages/index.js",
+      "issuerId": "./client/front_pages/index.js",
+      "issuerName": "./client/front_pages/index.js",
+      "profile": {
+        "factory": 287,
+        "building": 0,
+        "dependencies": 0
+      },
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "reasons": [
+        {
+          "moduleId": "./client/front_pages/index.js",
+          "moduleIdentifier": "/Users/fengertong/sherry/react-redux-node/node_modules/babel-loader/lib/index.js!/Users/fengertong/sherry/react-redux-node/node_modules/eslint-loader/index.js!/Users/fengertong/sherry/react-redux-node/client/front_pages/index.js",
+          "module": "./client/front_pages/index.js",
+          "moduleName": "./client/front_pages/index.js",
+          "type": "cjs require",
+          "userRequest": "react-dom",
+          "loc": "9:16-36"
+        }
+      ],
+      "usedExports": true,
+      "providedExports": null,
+      "depth": 2
+    },
+    {
+      "id": "./client/end_pages/index.js",
+      "identifier": "/Users/fengertong/sherry/react-redux-node/node_modules/babel-loader/lib/index.js!/Users/fengertong/sherry/react-redux-node/node_modules/eslint-loader/index.js!/Users/fengertong/sherry/react-redux-node/client/end_pages/index.js",
+      "name": "./client/end_pages/index.js",
+      "index": 1,
+      "index2": 0,
+      "size": 28,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        1
+      ],
+      "assets": [],
+      "issuer": "multi ./client/end_pages/index.js",
+      "issuerId": 3,
+      "issuerName": "multi ./client/end_pages/index.js",
+      "profile": {
+        "factory": 34,
+        "building": 950
+      },
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "reasons": [
+        {
+          "moduleId": 3,
+          "moduleIdentifier": "multi ./client/end_pages/index.js",
+          "module": "multi ./client/end_pages/index.js",
+          "moduleName": "multi ./client/end_pages/index.js",
+          "type": "single entry",
+          "userRequest": "./client/end_pages/index.js",
+          "loc": "admin:100000"
+        }
+      ],
+      "usedExports": true,
+      "providedExports": null,
+      "depth": 1,
+      "source": "'use strict';\n\nvar a = '20';"
+    },
+    {
+      "id": "./client/front_pages/index.js",
+      "identifier": "/Users/fengertong/sherry/react-redux-node/node_modules/babel-loader/lib/index.js!/Users/fengertong/sherry/react-redux-node/node_modules/eslint-loader/index.js!/Users/fengertong/sherry/react-redux-node/client/front_pages/index.js",
+      "name": "./client/front_pages/index.js",
+      "index": 3,
+      "index2": 6,
+      "size": 3914,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        0
+      ],
+      "assets": [],
+      "issuer": "multi ./client/front_pages/index.js",
+      "issuerId": 4,
+      "issuerName": "multi ./client/front_pages/index.js",
+      "profile": {
+        "factory": 245,
+        "building": 892
+      },
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "reasons": [
+        {
+          "moduleId": 4,
+          "moduleIdentifier": "multi ./client/front_pages/index.js",
+          "module": "multi ./client/front_pages/index.js",
+          "moduleName": "multi ./client/front_pages/index.js",
+          "type": "single entry",
+          "userRequest": "./client/front_pages/index.js",
+          "loc": "client:100000"
+        }
+      ],
+      "usedExports": true,
+      "providedExports": null,
+      "depth": 1,
+      "source": "'use strict';\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nvar _react = require('react');\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _reactDom = require('react-dom');\n\nvar _reactDom2 = _interopRequireDefault(_reactDom);\n\nrequire('./sass/index.scss');\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return call && (typeof call === \"object\" || typeof call === \"function\") ? call : self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function, not \" + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /*\n                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Created by sheng.yu on 2018-05-01 01:43:37. \n                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */\n\nvar Hello = function (_Component) {\n  _inherits(Hello, _Component);\n\n  function Hello(props) {\n    _classCallCheck(this, Hello);\n\n    // const xhr = new XMLHttpRequest();\n    // xhr.open('GET', '/api/user', true);\n    // xhr.onreadystatechange = () => {\n    //   if (xhr.status === 200 && xhr.readyState === 4) {\n    //     console.log(xhr.responseText);\n    //   }\n    // }\n    // xhr.send(null);\n    // fetch('/api/user').then( response => {\n    //   return response.json();\n    // }).then( json => {\n    //   console.log(json);\n    // });\n    var _this = _possibleConstructorReturn(this, (Hello.__proto__ || Object.getPrototypeOf(Hello)).call(this, props));\n\n    console.log('constructor');\n    return _this;\n  }\n\n  _createClass(Hello, [{\n    key: 'render',\n    value: function render() {\n      console.log('father');\n      return _react2.default.createElement(\n        'div',\n        { className: 'main-div' },\n        '\\u54C8'\n      );\n    }\n  }]);\n\n  return Hello;\n}(_react.Component);\n\n_reactDom2.default.render(_react2.default.createElement(Hello, null), document.getElementById('main'));"
+    },
+    {
+      "id": "./client/front_pages/sass/index.scss",
+      "identifier": "/Users/fengertong/sherry/react-redux-node/node_modules/extract-text-webpack-plugin/loader.js??ref--3-0!/Users/fengertong/sherry/react-redux-node/node_modules/style-loader/index.js!/Users/fengertong/sherry/react-redux-node/node_modules/css-loader/index.js??ref--3-2!/Users/fengertong/sherry/react-redux-node/node_modules/postcss-loader/lib/index.js??ref--3-3!/Users/fengertong/sherry/react-redux-node/node_modules/sass-loader/lib/loader.js??ref--3-4!/Users/fengertong/sherry/react-redux-node/client/front_pages/sass/index.scss",
+      "name": "./client/front_pages/sass/index.scss",
+      "index": 7,
+      "index2": 5,
+      "size": 41,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        0
+      ],
+      "assets": [],
+      "issuer": "/Users/fengertong/sherry/react-redux-node/node_modules/babel-loader/lib/index.js!/Users/fengertong/sherry/react-redux-node/node_modules/eslint-loader/index.js!/Users/fengertong/sherry/react-redux-node/client/front_pages/index.js",
+      "issuerId": "./client/front_pages/index.js",
+      "issuerName": "./client/front_pages/index.js",
+      "profile": {
+        "factory": 11,
+        "building": 812
+      },
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "reasons": [
+        {
+          "moduleId": "./client/front_pages/index.js",
+          "moduleIdentifier": "/Users/fengertong/sherry/react-redux-node/node_modules/babel-loader/lib/index.js!/Users/fengertong/sherry/react-redux-node/node_modules/eslint-loader/index.js!/Users/fengertong/sherry/react-redux-node/client/front_pages/index.js",
+          "module": "./client/front_pages/index.js",
+          "moduleName": "./client/front_pages/index.js",
+          "type": "cjs require",
+          "userRequest": "./sass/index.scss",
+          "loc": "13:0-28"
+        }
+      ],
+      "usedExports": true,
+      "providedExports": null,
+      "depth": 2,
+      "source": "// removed by extract-text-webpack-plugin"
+    },
+    {
+      "id": 3,
+      "identifier": "multi ./client/end_pages/index.js",
+      "name": "multi ./client/end_pages/index.js",
+      "index": 0,
+      "index2": 1,
+      "size": 28,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        1
+      ],
+      "assets": [],
+      "issuer": null,
+      "issuerId": null,
+      "issuerName": null,
+      "profile": {
+        "factory": 1,
+        "building": 0
+      },
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "reasons": [],
+      "usedExports": true,
+      "providedExports": null,
+      "depth": 0
+    },
+    {
+      "id": 4,
+      "identifier": "multi ./client/front_pages/index.js",
+      "name": "multi ./client/front_pages/index.js",
+      "index": 2,
+      "index2": 7,
+      "size": 28,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        0
+      ],
+      "assets": [],
+      "issuer": null,
+      "issuerId": null,
+      "issuerName": null,
+      "profile": {
+        "factory": 0,
+        "building": 0
+      },
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "reasons": [],
+      "usedExports": true,
+      "providedExports": null,
+      "depth": 0
+    }
+  ],
+  "filteredModules": 0,
+  "children": [
+    {
+      "errors": [],
+      "warnings": [],
+      "publicPath": "/",
+      "assetsByChunkName": {},
+      "assets": [],
+      "entrypoints": {
+        "undefined": {
+          "chunks": [
+            0
+          ],
+          "assets": [
+            "extract-text-webpack-plugin-output-filename"
+          ]
+        }
+      },
+      "chunks": [
+        {
+          "id": 0,
+          "rendered": true,
+          "initial": true,
+          "entry": true,
+          "extraAsync": false,
+          "size": 3044,
+          "names": [],
+          "files": [
+            "extract-text-webpack-plugin-output-filename"
+          ],
+          "hash": "2effacac733aace3f702",
+          "parents": [],
+          "modules": [
+            {
+              "id": "./node_modules/css-loader/index.js?{\"sourceMap\":true}!./node_modules/postcss-loader/lib/index.js?{\"sourceMap\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":true}!./client/front_pages/sass/index.scss",
+              "identifier": "/Users/fengertong/sherry/react-redux-node/node_modules/css-loader/index.js?{\"sourceMap\":true}!/Users/fengertong/sherry/react-redux-node/node_modules/postcss-loader/lib/index.js?{\"sourceMap\":true}!/Users/fengertong/sherry/react-redux-node/node_modules/sass-loader/lib/loader.js?{\"sourceMap\":true}!/Users/fengertong/sherry/react-redux-node/client/front_pages/sass/index.scss",
+              "name": "./~/css-loader?{\"sourceMap\":true}!./~/postcss-loader/lib?{\"sourceMap\":true}!./~/sass-loader/lib/loader.js?{\"sourceMap\":true}!./client/front_pages/sass/index.scss",
+              "index": 0,
+              "index2": 1,
+              "size": 766,
+              "cacheable": true,
+              "built": true,
+              "optional": false,
+              "prefetched": false,
+              "chunks": [
+                0
+              ],
+              "assets": [],
+              "issuer": null,
+              "issuerId": null,
+              "issuerName": null,
+              "profile": {
+                "factory": 1,
+                "building": 691
+              },
+              "failed": false,
+              "errors": 0,
+              "warnings": 0,
+              "reasons": [],
+              "usedExports": true,
+              "providedExports": null,
+              "depth": 0,
+              "source": "exports = module.exports = require(\"../../../node_modules/css-loader/lib/css-base.js\")(true);\n// imports\n\n\n// module\nexports.push([module.id, \".main-div {\\n  width: 200px;\\n  height: 200px;\\n  font-size: 50px;\\n  color: #fff;\\n  background: #59A3FF; }\\n\", \"\", {\"version\":3,\"sources\":[\"/Users/fengertong/sherry/react-redux-node/client/front_pages/sass/index.scss\"],\"names\":[],\"mappings\":\"AAQA;EACE,aAAY;EACZ,cAAa;EACb,gBAAe;EACf,YATgB;EAUhB,oBAXkB,EAYnB\",\"file\":\"index.scss\",\"sourcesContent\":[\"@charset \\\"utf-8\\\";\\n\\n$main-color: #59A3FF;\\n$white-color: #fff;\\n\\n$font-size-14: 14px;\\n$font-size-16: 16px;\\n\\n.main-div{\\n  width: 200px;\\n  height: 200px;\\n  font-size: 50px;\\n  color: $white-color;\\n  background: $main-color; \\n}\\n\"],\"sourceRoot\":\"\"}]);\n\n// exports\n"
+            },
+            {
+              "id": "./node_modules/css-loader/lib/css-base.js",
+              "identifier": "/Users/fengertong/sherry/react-redux-node/node_modules/babel-loader/lib/index.js!/Users/fengertong/sherry/react-redux-node/node_modules/eslint-loader/index.js!/Users/fengertong/sherry/react-redux-node/node_modules/css-loader/lib/css-base.js",
+              "name": "./~/css-loader/lib/css-base.js",
+              "index": 1,
+              "index2": 0,
+              "size": 2278,
+              "cacheable": true,
+              "built": true,
+              "optional": false,
+              "prefetched": false,
+              "chunks": [
+                0
+              ],
+              "assets": [],
+              "issuer": "/Users/fengertong/sherry/react-redux-node/node_modules/css-loader/index.js?{\"sourceMap\":true}!/Users/fengertong/sherry/react-redux-node/node_modules/postcss-loader/lib/index.js?{\"sourceMap\":true}!/Users/fengertong/sherry/react-redux-node/node_modules/sass-loader/lib/loader.js?{\"sourceMap\":true}!/Users/fengertong/sherry/react-redux-node/client/front_pages/sass/index.scss",
+              "issuerId": "./node_modules/css-loader/index.js?{\"sourceMap\":true}!./node_modules/postcss-loader/lib/index.js?{\"sourceMap\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":true}!./client/front_pages/sass/index.scss",
+              "issuerName": "./~/css-loader?{\"sourceMap\":true}!./~/postcss-loader/lib?{\"sourceMap\":true}!./~/sass-loader/lib/loader.js?{\"sourceMap\":true}!./client/front_pages/sass/index.scss",
+              "profile": {
+                "factory": 60,
+                "building": 31
+              },
+              "failed": false,
+              "errors": 0,
+              "warnings": 0,
+              "reasons": [
+                {
+                  "moduleId": "./node_modules/css-loader/index.js?{\"sourceMap\":true}!./node_modules/postcss-loader/lib/index.js?{\"sourceMap\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":true}!./client/front_pages/sass/index.scss",
+                  "moduleIdentifier": "/Users/fengertong/sherry/react-redux-node/node_modules/css-loader/index.js?{\"sourceMap\":true}!/Users/fengertong/sherry/react-redux-node/node_modules/postcss-loader/lib/index.js?{\"sourceMap\":true}!/Users/fengertong/sherry/react-redux-node/node_modules/sass-loader/lib/loader.js?{\"sourceMap\":true}!/Users/fengertong/sherry/react-redux-node/client/front_pages/sass/index.scss",
+                  "module": "./~/css-loader?{\"sourceMap\":true}!./~/postcss-loader/lib?{\"sourceMap\":true}!./~/sass-loader/lib/loader.js?{\"sourceMap\":true}!./client/front_pages/sass/index.scss",
+                  "moduleName": "./~/css-loader?{\"sourceMap\":true}!./~/postcss-loader/lib?{\"sourceMap\":true}!./~/sass-loader/lib/loader.js?{\"sourceMap\":true}!./client/front_pages/sass/index.scss",
+                  "type": "cjs require",
+                  "userRequest": "../../../node_modules/css-loader/lib/css-base.js",
+                  "loc": "1:27-86"
+                }
+              ],
+              "usedExports": true,
+              "providedExports": null,
+              "depth": 1,
+              "source": "\"use strict\";\n\n/*\n\tMIT License http://www.opensource.org/licenses/mit-license.php\n\tAuthor Tobias Koppers @sokra\n*/\n// css base code, injected by the css-loader\nmodule.exports = function (useSourceMap) {\n\tvar list = [];\n\n\t// return the list of modules as css string\n\tlist.toString = function toString() {\n\t\treturn this.map(function (item) {\n\t\t\tvar content = cssWithMappingToString(item, useSourceMap);\n\t\t\tif (item[2]) {\n\t\t\t\treturn \"@media \" + item[2] + \"{\" + content + \"}\";\n\t\t\t} else {\n\t\t\t\treturn content;\n\t\t\t}\n\t\t}).join(\"\");\n\t};\n\n\t// import a list of modules into the list\n\tlist.i = function (modules, mediaQuery) {\n\t\tif (typeof modules === \"string\") modules = [[null, modules, \"\"]];\n\t\tvar alreadyImportedModules = {};\n\t\tfor (var i = 0; i < this.length; i++) {\n\t\t\tvar id = this[i][0];\n\t\t\tif (typeof id === \"number\") alreadyImportedModules[id] = true;\n\t\t}\n\t\tfor (i = 0; i < modules.length; i++) {\n\t\t\tvar item = modules[i];\n\t\t\t// skip already imported module\n\t\t\t// this implementation is not 100% perfect for weird media query combinations\n\t\t\t//  when a module is imported multiple times with different media queries.\n\t\t\t//  I hope this will never occur (Hey this way we have smaller bundles)\n\t\t\tif (typeof item[0] !== \"number\" || !alreadyImportedModules[item[0]]) {\n\t\t\t\tif (mediaQuery && !item[2]) {\n\t\t\t\t\titem[2] = mediaQuery;\n\t\t\t\t} else if (mediaQuery) {\n\t\t\t\t\titem[2] = \"(\" + item[2] + \") and (\" + mediaQuery + \")\";\n\t\t\t\t}\n\t\t\t\tlist.push(item);\n\t\t\t}\n\t\t}\n\t};\n\treturn list;\n};\n\nfunction cssWithMappingToString(item, useSourceMap) {\n\tvar content = item[1] || '';\n\tvar cssMapping = item[3];\n\tif (!cssMapping) {\n\t\treturn content;\n\t}\n\n\tif (useSourceMap && typeof btoa === 'function') {\n\t\tvar sourceMapping = toComment(cssMapping);\n\t\tvar sourceURLs = cssMapping.sources.map(function (source) {\n\t\t\treturn '/*# sourceURL=' + cssMapping.sourceRoot + source + ' */';\n\t\t});\n\n\t\treturn [content].concat(sourceURLs).concat([sourceMapping]).join('\\n');\n\t}\n\n\treturn [content].join('\\n');\n}\n\n// Adapted from convert-source-map (MIT)\nfunction toComment(sourceMap) {\n\t// eslint-disable-next-line no-undef\n\tvar base64 = btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap))));\n\tvar data = 'sourceMappingURL=data:application/json;charset=utf-8;base64,' + base64;\n\n\treturn '/*# ' + data + ' */';\n}"
+            }
+          ],
+          "filteredModules": 0,
+          "origins": [
+            {
+              "moduleId": "./node_modules/css-loader/index.js?{\"sourceMap\":true}!./node_modules/postcss-loader/lib/index.js?{\"sourceMap\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":true}!./client/front_pages/sass/index.scss",
+              "module": "/Users/fengertong/sherry/react-redux-node/node_modules/css-loader/index.js?{\"sourceMap\":true}!/Users/fengertong/sherry/react-redux-node/node_modules/postcss-loader/lib/index.js?{\"sourceMap\":true}!/Users/fengertong/sherry/react-redux-node/node_modules/sass-loader/lib/loader.js?{\"sourceMap\":true}!/Users/fengertong/sherry/react-redux-node/client/front_pages/sass/index.scss",
+              "moduleIdentifier": "/Users/fengertong/sherry/react-redux-node/node_modules/css-loader/index.js?{\"sourceMap\":true}!/Users/fengertong/sherry/react-redux-node/node_modules/postcss-loader/lib/index.js?{\"sourceMap\":true}!/Users/fengertong/sherry/react-redux-node/node_modules/sass-loader/lib/loader.js?{\"sourceMap\":true}!/Users/fengertong/sherry/react-redux-node/client/front_pages/sass/index.scss",
+              "moduleName": "./~/css-loader?{\"sourceMap\":true}!./~/postcss-loader/lib?{\"sourceMap\":true}!./~/sass-loader/lib/loader.js?{\"sourceMap\":true}!./client/front_pages/sass/index.scss",
+              "loc": "",
+              "reasons": []
+            }
+          ]
+        }
+      ],
+      "modules": [
+        {
+          "id": "./node_modules/css-loader/index.js?{\"sourceMap\":true}!./node_modules/postcss-loader/lib/index.js?{\"sourceMap\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":true}!./client/front_pages/sass/index.scss",
+          "identifier": "/Users/fengertong/sherry/react-redux-node/node_modules/css-loader/index.js?{\"sourceMap\":true}!/Users/fengertong/sherry/react-redux-node/node_modules/postcss-loader/lib/index.js?{\"sourceMap\":true}!/Users/fengertong/sherry/react-redux-node/node_modules/sass-loader/lib/loader.js?{\"sourceMap\":true}!/Users/fengertong/sherry/react-redux-node/client/front_pages/sass/index.scss",
+          "name": "./~/css-loader?{\"sourceMap\":true}!./~/postcss-loader/lib?{\"sourceMap\":true}!./~/sass-loader/lib/loader.js?{\"sourceMap\":true}!./client/front_pages/sass/index.scss",
+          "index": 0,
+          "index2": 1,
+          "size": 766,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            0
+          ],
+          "assets": [],
+          "issuer": null,
+          "issuerId": null,
+          "issuerName": null,
+          "profile": {
+            "factory": 1,
+            "building": 691
+          },
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "reasons": [],
+          "usedExports": true,
+          "providedExports": null,
+          "depth": 0,
+          "source": "exports = module.exports = require(\"../../../node_modules/css-loader/lib/css-base.js\")(true);\n// imports\n\n\n// module\nexports.push([module.id, \".main-div {\\n  width: 200px;\\n  height: 200px;\\n  font-size: 50px;\\n  color: #fff;\\n  background: #59A3FF; }\\n\", \"\", {\"version\":3,\"sources\":[\"/Users/fengertong/sherry/react-redux-node/client/front_pages/sass/index.scss\"],\"names\":[],\"mappings\":\"AAQA;EACE,aAAY;EACZ,cAAa;EACb,gBAAe;EACf,YATgB;EAUhB,oBAXkB,EAYnB\",\"file\":\"index.scss\",\"sourcesContent\":[\"@charset \\\"utf-8\\\";\\n\\n$main-color: #59A3FF;\\n$white-color: #fff;\\n\\n$font-size-14: 14px;\\n$font-size-16: 16px;\\n\\n.main-div{\\n  width: 200px;\\n  height: 200px;\\n  font-size: 50px;\\n  color: $white-color;\\n  background: $main-color; \\n}\\n\"],\"sourceRoot\":\"\"}]);\n\n// exports\n"
+        },
+        {
+          "id": "./node_modules/css-loader/lib/css-base.js",
+          "identifier": "/Users/fengertong/sherry/react-redux-node/node_modules/babel-loader/lib/index.js!/Users/fengertong/sherry/react-redux-node/node_modules/eslint-loader/index.js!/Users/fengertong/sherry/react-redux-node/node_modules/css-loader/lib/css-base.js",
+          "name": "./~/css-loader/lib/css-base.js",
+          "index": 1,
+          "index2": 0,
+          "size": 2278,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            0
+          ],
+          "assets": [],
+          "issuer": "/Users/fengertong/sherry/react-redux-node/node_modules/css-loader/index.js?{\"sourceMap\":true}!/Users/fengertong/sherry/react-redux-node/node_modules/postcss-loader/lib/index.js?{\"sourceMap\":true}!/Users/fengertong/sherry/react-redux-node/node_modules/sass-loader/lib/loader.js?{\"sourceMap\":true}!/Users/fengertong/sherry/react-redux-node/client/front_pages/sass/index.scss",
+          "issuerId": "./node_modules/css-loader/index.js?{\"sourceMap\":true}!./node_modules/postcss-loader/lib/index.js?{\"sourceMap\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":true}!./client/front_pages/sass/index.scss",
+          "issuerName": "./~/css-loader?{\"sourceMap\":true}!./~/postcss-loader/lib?{\"sourceMap\":true}!./~/sass-loader/lib/loader.js?{\"sourceMap\":true}!./client/front_pages/sass/index.scss",
+          "profile": {
+            "factory": 60,
+            "building": 31
+          },
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "reasons": [
+            {
+              "moduleId": "./node_modules/css-loader/index.js?{\"sourceMap\":true}!./node_modules/postcss-loader/lib/index.js?{\"sourceMap\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":true}!./client/front_pages/sass/index.scss",
+              "moduleIdentifier": "/Users/fengertong/sherry/react-redux-node/node_modules/css-loader/index.js?{\"sourceMap\":true}!/Users/fengertong/sherry/react-redux-node/node_modules/postcss-loader/lib/index.js?{\"sourceMap\":true}!/Users/fengertong/sherry/react-redux-node/node_modules/sass-loader/lib/loader.js?{\"sourceMap\":true}!/Users/fengertong/sherry/react-redux-node/client/front_pages/sass/index.scss",
+              "module": "./~/css-loader?{\"sourceMap\":true}!./~/postcss-loader/lib?{\"sourceMap\":true}!./~/sass-loader/lib/loader.js?{\"sourceMap\":true}!./client/front_pages/sass/index.scss",
+              "moduleName": "./~/css-loader?{\"sourceMap\":true}!./~/postcss-loader/lib?{\"sourceMap\":true}!./~/sass-loader/lib/loader.js?{\"sourceMap\":true}!./client/front_pages/sass/index.scss",
+              "type": "cjs require",
+              "userRequest": "../../../node_modules/css-loader/lib/css-base.js",
+              "loc": "1:27-86"
+            }
+          ],
+          "usedExports": true,
+          "providedExports": null,
+          "depth": 1,
+          "source": "\"use strict\";\n\n/*\n\tMIT License http://www.opensource.org/licenses/mit-license.php\n\tAuthor Tobias Koppers @sokra\n*/\n// css base code, injected by the css-loader\nmodule.exports = function (useSourceMap) {\n\tvar list = [];\n\n\t// return the list of modules as css string\n\tlist.toString = function toString() {\n\t\treturn this.map(function (item) {\n\t\t\tvar content = cssWithMappingToString(item, useSourceMap);\n\t\t\tif (item[2]) {\n\t\t\t\treturn \"@media \" + item[2] + \"{\" + content + \"}\";\n\t\t\t} else {\n\t\t\t\treturn content;\n\t\t\t}\n\t\t}).join(\"\");\n\t};\n\n\t// import a list of modules into the list\n\tlist.i = function (modules, mediaQuery) {\n\t\tif (typeof modules === \"string\") modules = [[null, modules, \"\"]];\n\t\tvar alreadyImportedModules = {};\n\t\tfor (var i = 0; i < this.length; i++) {\n\t\t\tvar id = this[i][0];\n\t\t\tif (typeof id === \"number\") alreadyImportedModules[id] = true;\n\t\t}\n\t\tfor (i = 0; i < modules.length; i++) {\n\t\t\tvar item = modules[i];\n\t\t\t// skip already imported module\n\t\t\t// this implementation is not 100% perfect for weird media query combinations\n\t\t\t//  when a module is imported multiple times with different media queries.\n\t\t\t//  I hope this will never occur (Hey this way we have smaller bundles)\n\t\t\tif (typeof item[0] !== \"number\" || !alreadyImportedModules[item[0]]) {\n\t\t\t\tif (mediaQuery && !item[2]) {\n\t\t\t\t\titem[2] = mediaQuery;\n\t\t\t\t} else if (mediaQuery) {\n\t\t\t\t\titem[2] = \"(\" + item[2] + \") and (\" + mediaQuery + \")\";\n\t\t\t\t}\n\t\t\t\tlist.push(item);\n\t\t\t}\n\t\t}\n\t};\n\treturn list;\n};\n\nfunction cssWithMappingToString(item, useSourceMap) {\n\tvar content = item[1] || '';\n\tvar cssMapping = item[3];\n\tif (!cssMapping) {\n\t\treturn content;\n\t}\n\n\tif (useSourceMap && typeof btoa === 'function') {\n\t\tvar sourceMapping = toComment(cssMapping);\n\t\tvar sourceURLs = cssMapping.sources.map(function (source) {\n\t\t\treturn '/*# sourceURL=' + cssMapping.sourceRoot + source + ' */';\n\t\t});\n\n\t\treturn [content].concat(sourceURLs).concat([sourceMapping]).join('\\n');\n\t}\n\n\treturn [content].join('\\n');\n}\n\n// Adapted from convert-source-map (MIT)\nfunction toComment(sourceMap) {\n\t// eslint-disable-next-line no-undef\n\tvar base64 = btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap))));\n\tvar data = 'sourceMappingURL=data:application/json;charset=utf-8;base64,' + base64;\n\n\treturn '/*# ' + data + ' */';\n}"
+        }
+      ],
+      "filteredModules": 0,
+      "children": [],
+      "name": "extract-text-webpack-plugin"
+    }
+  ]
+}

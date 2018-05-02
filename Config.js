@@ -14,13 +14,13 @@ module.exports = {
       'react-redux',
       'react-router',
       'redux',
-      'redux-immutable',
+      //'redux-immutable',
       'immutable',
       'isomorphic-fetch',
       'fetch-ie8',
       'antd'
     ],
     admin: ['./client/end_pages/index.js'],
-    client: ['babel-polyfill', './client/front_pages/index.js']
+    client: ['./client/front_pages/index.js']
   }
 }

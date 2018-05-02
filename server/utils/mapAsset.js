@@ -16,4 +16,6 @@ const mapAsset = key => {
   }
   return srcString;
 }
+
 module.exports = mapAsset;
+

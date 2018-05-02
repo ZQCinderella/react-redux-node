@@ -14,7 +14,7 @@
     "prebuild": "npm run clean",
     "build": "cross-env NODE_ENV=production webpack -p --colors --config webpack.config.js && cross-env NODE_ENV=production npm run generate-env",
     "postbuild": "sh build.sh",
-    "prestart": "cross-env NODE_ENV=development npm run generate-env",
+    "prestart": "cross-env NODE_ENV=development npm run generate-env &&cross-env NODE_ENV=development webpack --profile --json > status.json",
     "start": "nodemon ./bin/www"
   },
   "dependencies": {

@@ -4,12 +4,12 @@
 const express = require('express');
 const router = express.Router();
 
-router.get('/', (req, res, next) => {
+router.get('/user', (req, res, next) => {
   res.json({
     name: 'fet',
     age: 10
   });
-  //next();
+  next();
 });
 module.exports = router;
 

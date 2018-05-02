@@ -14,14 +14,14 @@ const ExtractCSS = new ExtractTextPlugin({
   allChunks: true
 });
 module.exports = (config) => {
-  //delete config.entry.vendor;
+  delete config.entry.vendor;
   return {
     entry: config.entry,
     output: {
       filename: '[name].bundle.js',
       path: path.resolve(publicPath, 'dist/'),
       sourceMapFilename: './map/[file].map',
-      publicPath: '/public/dist/'
+      publicPath: '/'
     },
     devtool: 'eval-source-map',
     resolve: {
@@ -38,6 +38,7 @@ module.exports = (config) => {
       ],
     },
     plugins: [
+      new webpack.NamedModulesPlugin(),
       new webpack.HotModuleReplacementPlugin(), // 热部署替换模块      
       new webpack.NoEmitOnErrorsPlugin(),
       //new CleanWebpackPlugin(['public/dist']),

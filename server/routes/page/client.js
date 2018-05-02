@@ -5,19 +5,20 @@
 //前端页面路由
 const express = require('express');
 const router = express.Router();
-const mapAsset = require('../../middleware/extractMapping');
 const getJS = key => {
   const buildScript = src => `<script src=${src}></script>`;
   let script = '';
   if (global.staticAssetsMapping[`${key}.js`]) {
     if (process.env.NODE_ENV === 'development') {
+      //script = `${buildScript(global.staticAssetsMapping['vendor.js'])}${buildScript(global.staticAssetsMapping[`${key}.js`])}`;
       script = `${buildScript('/public/dll/vendor.dll.js')}${buildScript(global.staticAssetsMapping[`${key}.js`])}`;
     } else {
-      script = `${buildScript(global.staticAssetsMapping['vendor.js'])}${buildCSS(global.staticAssetsMapping[`${key}.js`])}`;
+      script = `${buildScript(global.staticAssetsMapping['vendor.js'])}${buildScript(global.staticAssetsMapping[`${key}.js`])}`;
     }
   }
   return script;
 }
+
 const getCSS = key => {
   const buildCSS = href => `<link rel="stylesheet" href="${href}">`;
   if (global.staticAssetsMapping[`${key}.css`]) {
@@ -25,8 +26,8 @@ const getCSS = key => {
   }
   return '';
 }
+
 router.get('*', (req, res, next) => {
-  //mapAsset('client.js');
   const data = {
     name: 'sheng.yu',
     age: '20',
